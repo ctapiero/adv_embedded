@@ -1,34 +1,18 @@
-#include "unity.h"
-// #include ".h"
+#include <stdint.h>
+#include <unity.h>
 
-void setUp(void) {
-  // set stuff up here
+void setUp(void) {}
+
+void tearDown(void) {}
+
+void testWorks()
+{
+    TEST_ASSERT_TRUE_MESSAGE(1 == 1,"Data bits not set as expected");
 }
 
-void tearDown(void) {
-  // clean stuff up here
-}
-
-void test_function_should_doBlahAndBlah(void) {
-  // test stuff
-}
-
-void test_function_should_doAlsoDoBlah(void) {
-  // more test stuff
-}
-
-int runUnityTests(void) {
-  UNITY_BEGIN();
-  // RUN_TEST(test_function_should_doBlahAndBlah);
-  // RUN_TEST(test_function_should_doAlsoDoBlah);
-  return UNITY_END();
-}
-
-// WARNING!!! PLEASE REMOVE UNNECESSARY MAIN IMPLEMENTATIONS //
-
-/**
-  * For native dev-platform or for some embedded frameworks
-  */
-int main(void) {
-  return runUnityTests();
+int main (void)
+{
+    UNITY_BEGIN();
+    RUN_TEST(testWorks);
+    return UNITY_END();
 }
