@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+//Author: Cristian Tapiero
+
 #include <zephyr.h>
 #include <device.h>
 #include <devicetree.h>
